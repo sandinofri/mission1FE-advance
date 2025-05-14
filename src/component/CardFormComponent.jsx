@@ -25,6 +25,7 @@ const CardFormComponent = ({
 
   const [isLoading, setIsLoading] = useState(false);
   const [disableBtn, setDisableBtn] = useState(false);
+  const [type, setType] = useState("password");
 
   const navigate = useNavigate();
 
@@ -43,11 +44,13 @@ const CardFormComponent = ({
 
     if (!username || !password || (mode === "register" && !confirmPassword)) {
       alert("Silakan isi semua data");
+      setDisableBtn(false);
       return;
     }
 
     if (mode === "register" && password !== confirmPassword) {
       alert("Password tidak sama");
+      setDisableBtn(false);
       return;
     }
 
@@ -85,6 +88,11 @@ const CardFormComponent = ({
     }
   };
 
+  const handleClick=()=>{
+    console.log("clicked");
+    setType((prev) => (prev === "password" ? "text" : "password"));
+  }
+
   return (
     <div className="bg-[#141618] opacity-90 p-6 rounded-lg shadow-2xl">
       {isLoading && <LoadingComponent />}
@@ -109,21 +117,23 @@ const CardFormComponent = ({
         <InputFieldComponent
           text={"Password"}
           placeholder={"Masukan kata sandi"}
-          type={"password"}
+          type={type}
           isVisible={true}
           id={"password"}
           name={"password"}
           onChange={handleChange}
+          onClick={handleClick}
         />
         {isVisible && (
           <InputFieldComponent
             text={"Konfirmasi Kata Sandi"}
             placeholder={"Masukan kata sandi"}
-            type={"password"}
+            type={type}
             isVisible={true}
             id={"konfirm-password"}
             name={"confirmPassword"}
             onChange={handleChange}
+            onClick={handleClick}
           />
         )}
 

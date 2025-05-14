@@ -9,7 +9,8 @@ const InputFieldComponent = ({
   type,
   id,
   name,
-  onChange
+  onChange,
+  onClick
 }) => {
 
   return (
@@ -26,7 +27,7 @@ const InputFieldComponent = ({
           name={name}
           onChange={onChange}
         />
-        {isVisible && <img className="absolute right-2" src={eye} alt="" />}
+        {isVisible && <img className="absolute right-2" src={eye} alt="" onClick={onClick}/>}
       </div>
     </div>
   );
