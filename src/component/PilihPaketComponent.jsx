@@ -1,6 +1,5 @@
 import React from "react";
-import check from "../assets/check.png";
-import { Link } from "react-router-dom";
+
 import Paket from "./Paket";
 import {paket} from "../data/data";
 

@@ -1,11 +1,10 @@
-import React, { use } from "react";
+
 import roll from "../assets/movie-open.png";
 import profilePicture from "../assets/avatar-icon.webp";
 import { Link, useNavigate } from "react-router-dom";
 import GenreComponent from "./GenreComponent";
-import GenreButtonComponent from "./GenreButtonComponent";
 import { useState } from "react";
-import arrow from "../assets/keyboardArrowDown.png";
+import arrow from "../assets/KeyboardArrowDown.png";
 
 const NavbarComponent = ({ togleDropDown, isVisible }) => {
   const navigate = useNavigate();

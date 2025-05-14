@@ -1,7 +1,6 @@
 import React from "react";
 import { series } from "../data/data";
 import { useState, useEffect } from "react";
-import duty from "../assets/duty.png";
 const SeriesComponent = ({ header, location }) => {
   const [popup, setPopUp] = useState(false);
   const [popUpIndex, setPopUpIndex] = useState(null);
