@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import arrow from "../assets/keyboardArrowDown.png";
+import arrow from "../assets/KeyboardArrowDown.png";
 
 const GenreButtonComponent = () => {
 
