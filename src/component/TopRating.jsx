@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { topRating } from "../data/data.js";
 import check from "../assets/check.png";
-import arrow from "../assets/keyboardArrowDown.png";
+import arrow from "../assets/KeyboardArrowDown.png";
 import vector from "../assets/Vector (1).png";
 const TopRating = () => {
   const [overedIndex, setOveredIndex] = useState(null);
