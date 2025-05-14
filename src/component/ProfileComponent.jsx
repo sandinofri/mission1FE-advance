@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import profilePicture from "../assets/avatar-icon.webp";
-import warning from "../assets/warning.png";
+import warning from "../assets/Warning.png";
 import { Link } from "react-router-dom";
 import { updateUser } from "../service/api";
 import LoadingComponent from "./LoadingComponent";
